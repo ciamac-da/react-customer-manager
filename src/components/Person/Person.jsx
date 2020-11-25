@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Person =({firstname, lastname, age})=>{
+const Person =({firstname, lastname})=>{
 return(
     <div>
-        <p>{`${firstname} ${lastname} ${age} is years old!`}</p>
+        <p>{`${firstname} ${lastname}`}</p>
     </div>
 );
 }
