@@ -5,18 +5,19 @@ import Persons from "./components/Person/Persons.jsx";
 class App extends Component {
     state = { 
         persons:[
-            { firstname: "Ciamac" , lastname:"Da", age:31},
-            { firstname: "Alexandru" , lastname:"Gh", age:30},
-            { firstname: "Parsa" , lastname:"Mo", age:29}
+            { firstname: "Ciamac" , lastname:"Da"},
+            { firstname: "Alexandru" , lastname:"Gh"},
+            { firstname: "Parsa" , lastname:"Mo"}
 
         ]
      }
     render() { 
         const {persons} = this.state
-        return ( <div>
-        <Persons
-        persons={persons}
-         />
+        return (
+             <div>
+             <h2>Customer Manager</h2>
+             <h3>Number of customers ➡️ {persons.length} !</h3>
+        <Persons persons={persons} />
         </div> );
     }
 }

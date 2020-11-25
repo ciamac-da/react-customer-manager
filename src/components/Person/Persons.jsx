@@ -7,7 +7,6 @@ const Persons = ({ persons }) => {
             <Person 
             firstname={person.firstname}
             lastname={person.lastname}
-            age={person.age}
             />
         ))}
     </> 
