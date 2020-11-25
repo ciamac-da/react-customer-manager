@@ -18,13 +18,23 @@ export default myStyles(class App extends Component {
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
     }
+
+
+    handleDeletePerson = id =>{
+        const persons = [...this.state.persons]
+        const filteredPersons = persons.filter(p => p.id !== id)
+        this.setState({persons: filteredPersons})
+    }
+
     render() {
         const classes = this.props;
         const {persons, showPersons} = this.state
 
         let person = null;
         if(showPersons){
-            person =  <Persons persons={persons} />
+            person =  <Persons persons={persons} 
+            personDelete={this.handleDeletePerson}
+            />
         }
 
         return (
