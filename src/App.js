@@ -8,9 +8,9 @@ import Button from '@material-ui/core/Button';
 export default myStyles(class App extends Component {
     state = { 
         persons:[
-            { firstname: "Ciamac" , lastname:"Da"},
-            { firstname: "Alexandru" , lastname:"Gh"},
-            { firstname: "Parsa" , lastname:"Mo"}
+            { id:1,firstname: "Ciamac" , lastname:"Da"},
+            { id:2,firstname: "Alexandru" , lastname:"Gh"},
+            { id:3,firstname: "Parsa" , lastname:"Mo"}
         ],
         showPersons: false
     }
@@ -31,15 +31,15 @@ export default myStyles(class App extends Component {
              <div>
              <h2>Customer Manager</h2>
              <h3>Number of customers ➡️ {persons.length} !</h3>
-             {person}
              <Button 
              onClick={this.handleShowPerson}
              className={classes.root}
              variant="contained"
              color="secondary"
              > 
-             Show Persons 
+             Show Customers 
              </Button>
+             {person}
         </div> );
     }
 }
