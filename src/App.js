@@ -6,6 +6,8 @@ import Button from '@material-ui/core/Button';
 
 
 export default myStyles(class App extends Component {
+    //Well I dont need constructor and super here and then this.state
+    // The new feauture of ES7 👽
     state = { 
         persons:[
             { id:1,firstname: "Ciamac" , lastname:"Da"},
@@ -19,7 +21,7 @@ export default myStyles(class App extends Component {
         this.setState({showPersons: !this.state.showPersons})
     }
 
-
+    // Tod elete every single user!
     handleDeletePerson = id =>{
         const persons = [...this.state.persons]
         const filteredPersons = persons.filter(p => p.id !== id)
@@ -27,9 +29,10 @@ export default myStyles(class App extends Component {
     }
 
     render() {
-        const classes = this.props;
+        //To catch Material-Ui from... 
+        const {classes} = this.props;
         const {persons, showPersons} = this.state
-
+        // Person is empty at first1
         let person = null;
         if(showPersons){
             person =  <Persons persons={persons} 
@@ -42,6 +45,7 @@ export default myStyles(class App extends Component {
              <h2>Customer Manager</h2>
              <h3>Number of customers ➡️ {persons.length} !</h3>
              <Button 
+             // Using this event I switch users(hide , unhide, hide, unhide)
              onClick={this.handleShowPerson}
              className={classes.root}
              variant="contained"
@@ -49,7 +53,12 @@ export default myStyles(class App extends Component {
              > 
              Show Customers 
              </Button>
+             <p 
+            // style={{backgroundColor:"red"}}
+             className={classes.persons}
+             >
              {person}
+             </p>
         </div> );
     }
 }

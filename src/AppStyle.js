@@ -6,6 +6,17 @@ const useStyles = withStyles((theme) => ({
         margin: theme.spacing(1),
       },
     },
+    persons:{
+      backgroundColor: "red",
+      color:"white",
+      borderRadius: ".7rem",
+      textAlign: "center",
+      fontWeight: "bolder",
+      fontSize: "1rem",
+      "&:hover":{
+        backgroundColor: "gray !important"
+      }
+    }
   }));
 
   export default useStyles;
