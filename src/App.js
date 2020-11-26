@@ -10,9 +10,9 @@ export default myStyles(class App extends Component {
     // The new feauture of ES7 👽
     state = { 
         persons:[
-            { id:1,firstname: "Ciamac" , lastname:"Da"},
-            { id:2,firstname: "Alexandru" , lastname:"Gh"},
-            { id:3,firstname: "Parsa" , lastname:"Mo"}
+            { id:1,fullname: "Ciamac Da"},
+            { id:2,fullname: "Alexandru Gh"},
+            { id:3,fullname: "Jared Leto"}
         ],
         showPersons: false
     }
@@ -26,6 +26,9 @@ export default myStyles(class App extends Component {
         const persons = [...this.state.persons]
         const filteredPersons = persons.filter(p => p.id !== id)
         this.setState({persons: filteredPersons})
+
+
+
     }
 
     render() {

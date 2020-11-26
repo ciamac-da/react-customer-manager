@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Person =({firstname, lastname, personDelete})=>{
+const Person =({fullname, personDelete})=>{
 return(
     <div onClick={personDelete}>
-        <p>{`${firstname} ${lastname}`}</p>
+        <p>{`${fullname}`}</p>
     </div>
 );
 }

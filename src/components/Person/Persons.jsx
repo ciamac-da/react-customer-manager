@@ -6,8 +6,7 @@ const Persons = ({ persons, personDelete }) => {
         {persons.map(person => (
             <Person 
             key={person.id}
-            firstname={person.firstname}
-            lastname={person.lastname}
+            fullname={person.fullname}
             personDelete={()=> personDelete(person.id)}
             />
         ))}
