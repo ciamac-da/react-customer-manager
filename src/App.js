@@ -4,9 +4,8 @@ import Persons from "./components/Person/Persons.jsx";
 import myStyles from "./AppStyle";
 import Button from '@material-ui/core/Button';
 
-
 export default myStyles(class App extends Component {
-    //Well I dont need constructor and super here and then this.state
+    //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
     state = { 
         persons:[
@@ -16,7 +15,6 @@ export default myStyles(class App extends Component {
         ],
         showPersons: false
     }
-
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
     }
@@ -33,7 +31,7 @@ export default myStyles(class App extends Component {
 
     render() {
         //To catch Material-Ui from... 
-        const {classes} = this.props;
+        const {classes} = this.props
         const {persons, showPersons} = this.state
         // Person is empty at first1
         let person = null;
