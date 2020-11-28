@@ -13,14 +13,16 @@ export default myStyles(class App extends Component {
             { id:2,fullname: "Alexandru Gh"},
             { id:3,fullname: "Jared Leto"}
         ],
+        // The list of customers should be hidden at fisrt, therefore I Should set it to false!
         showPersons: false
     }
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
     }
 
-    // Tod elete every single user!
+    // To delete every single user!
     handleDeletePerson = id =>{
+        // to get a copy of customers list
         const persons = [...this.state.persons]
         const filteredPersons = persons.filter(p => p.id !== id)
         this.setState({persons: filteredPersons})
