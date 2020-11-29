@@ -39,7 +39,8 @@ const useStyles = withStyles((theme) => ({
     showBtn: {
       backgroundColor: "orange",
       margin: "2rem",
-      fontSize:"1.2rem"
+      fontSize:"1.2rem",
+      color:"white"
     }
   }));
 
