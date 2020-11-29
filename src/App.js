@@ -6,6 +6,7 @@ import {Button, Input, Fab }from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import myStyles from "./AppStyle.jsx";
 import {FcCustomerSupport} from "react-icons/fc";
+import "./index.css";
 
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
@@ -75,11 +76,11 @@ export default myStyles(class App extends Component {
 
         return (
              <div className={classes.header}>
-             <h2 className={classes.h2}>Customer Manager</h2>
-             <h3>Number of customers <FcCustomerSupport /> &nbsp; {persons.length} </h3>
-             <div>
+             <h2 className={classes.h2}>Customer Manager <FcCustomerSupport /></h2>
+             <h3 className={classes.h3}>Number of customers  &nbsp; {persons.length} </h3>
+             <div className={classes.fabIn}>
              <Fab 
-             color="primary" 
+             className={classes.fab}
              aria-label="add"
              onClick={this.handleNewPerson}
              >
@@ -90,6 +91,7 @@ export default myStyles(class App extends Component {
                  placeholder="Add New Customer" 
                  onChange= {this.setPerson}
                  value= {this.state.person}
+                 className={classes.mui}
                  />
              </div>
              <Button 

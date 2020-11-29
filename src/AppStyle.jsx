@@ -13,9 +13,27 @@ const useStyles = withStyles((theme) => ({
     alignItems: "center" 
     },
     h2: {
-      color: "orange",
+      display:"flex",
+      justifyContent:"center",
+      alignItems: "center",
+      flexDirection: "column",
+      color: "white",
       fontWeight: "bolder",
-      fontSize:"2rem"
+      fontSize:"2.5rem"
+    },
+    h3: {
+      color: "white",
+      fontWeight: "bolder",
+      fontSize:"1.5rem"
+    },
+    fab: {
+      color: "white",
+      backgroundColor: "orange"
+    },
+    fabIn:{
+      display: "flex",
+      justifyContent:"center",
+      margin: "1rem" 
     }
   }));
 
