@@ -4,6 +4,8 @@ import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
 import {Button, Input, Fab }from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
+import Page from "react-page-loading";
+
 
 export default (class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
