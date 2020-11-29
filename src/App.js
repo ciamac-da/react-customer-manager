@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 //import Person from "./components/Person/Person.jsx";
 import Persons from "./components/Person/Persons.jsx";
-import myStyles from "./AppStyle";
+//import myStyles from "./AppStyle.jsx";
 import Button from '@material-ui/core/Button';
 
-export default myStyles(class App extends Component {
+export default (class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
     state = { 
@@ -32,7 +32,6 @@ export default myStyles(class App extends Component {
         const {persons : allPersons} = this.state;
         const personIndex = allPersons.findIndex(p => p.id === id);
         const person = allPersons[personIndex]
-        console.log("Person ==>",person);
         // to change names
         person.fullname = event.target.value;
         // to get a copy of all persons
@@ -43,7 +42,7 @@ export default myStyles(class App extends Component {
     }
     render() {
         //To catch Material-Ui from... 
-        const {classes} = this.props
+        //const {classes} = this.props
         const {persons, showPersons} = this.state
         // Person is empty at first1
         let person = null;
@@ -61,7 +60,7 @@ export default myStyles(class App extends Component {
              <Button 
              // Using this event I switch users(hide , unhide, hide, unhide)
              onClick={this.handleShowPerson}
-             className={classes.root}
+          //   className={classes.root}
              variant="contained"
              color="secondary"
              > 
@@ -69,7 +68,7 @@ export default myStyles(class App extends Component {
              </Button>
              <p 
             // style={{backgroundColor:"red"}}
-             className={classes.persons}
+            // className={classes.persons}
              >
              {person}
              </p>
