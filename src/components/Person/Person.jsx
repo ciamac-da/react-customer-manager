@@ -21,11 +21,12 @@ return(
         placeholder={fullname} onChange={personChange}
         disableUnderline
         />
+        <div className={classes.buttons}>
         <Button 
         variant="contained" 
         onClick={personSave}
         className={classes.buttonSave}
-        >Save
+        >Save...
         </Button>
         <Button 
         onClick={personDelete}
@@ -33,6 +34,7 @@ return(
         className={classes.buttonDel}
         >Delete
         </Button>
+        </div>
     </Page>
     </div>
 );

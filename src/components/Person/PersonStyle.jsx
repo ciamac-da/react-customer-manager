@@ -29,18 +29,20 @@ const useStyles = makeStyles((theme) => ({
       borderRadius:".5rem",
       backgroundColor:"white"
     },
+    buttons:{
+      display: "flex",
+      jusifyContent: "center",
+    },
     buttonSave:{
       backgroundColor:"green",
-      marginTop: ".5rem",
-      marginBottom: ".5rem",
+      margin: ".9rem",
       "&:hover":{
         backgroundColor:"orange"
       }
      },
     buttonDel:{
      backgroundColor:"red",
-     marginTop: ".5rem",
-     marginBottom: ".5rem",
+     margin: ".9rem",
      "&:hover":{
        backgroundColor:"orange"
      }
