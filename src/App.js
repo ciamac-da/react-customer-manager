@@ -19,6 +19,10 @@ export default (class App extends Component {
         this.setState({showPersons: !this.state.showPersons})
     }
 
+    handleSavePerson = () =>{
+        this.setState({showPersons: !this.state.showPersons})
+    }
+
     // To delete every single user!
     handleDeletePerson = id =>{
         // to get a copy of customers list
@@ -65,6 +69,7 @@ export default (class App extends Component {
             person =  <Persons persons={persons} 
             personDelete={this.handleDeletePerson}
             personChange = {this.handleNameChange}
+            personSave = {this.handleSavePerson}
             />
         }
 
@@ -96,6 +101,7 @@ export default (class App extends Component {
              > 
              Show Customers 
              </Button>
+             
              {person}
         </div> );
     }

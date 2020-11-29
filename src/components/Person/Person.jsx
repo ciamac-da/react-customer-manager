@@ -5,7 +5,7 @@ import { Typography, Input } from '@material-ui/core';
 import Page from "react-page-loading";
 
 //import useStyles from '../../AppStyle';
-const Person =({fullname, personDelete, personChange})=>{
+const Person =({fullname,personSave, personDelete, personChange})=>{
     const classes = useStyles();
 return(
     <div className={classes.persons}>
@@ -22,9 +22,15 @@ return(
         disableUnderline
         />
         <Button 
+        variant="contained" 
+        onClick={personSave}
+        className={classes.buttonSave}
+        >Save
+        </Button>
+        <Button 
         onClick={personDelete}
         variant="contained" 
-        className={classes.button}
+        className={classes.buttonDel}
         >Delete
         </Button>
     </Page>

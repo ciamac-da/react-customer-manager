@@ -29,7 +29,15 @@ const useStyles = makeStyles((theme) => ({
       borderRadius:".5rem",
       backgroundColor:"white"
     },
-    button:{
+    buttonSave:{
+      backgroundColor:"green",
+      marginTop: ".5rem",
+      marginBottom: ".5rem",
+      "&:hover":{
+        backgroundColor:"orange"
+      }
+     },
+    buttonDel:{
      backgroundColor:"red",
      marginTop: ".5rem",
      marginBottom: ".5rem",
