@@ -28,12 +28,18 @@ const useStyles = withStyles((theme) => ({
     },
     fab: {
       color: "white",
-      backgroundColor: "orange"
+      backgroundColor: "orange",
+      marginRight: "1rem"
     },
     fabIn:{
       display: "flex",
       justifyContent:"center",
       margin: "1rem" 
+    },
+    showBtn: {
+      backgroundColor: "orange",
+      margin: "2rem",
+      fontSize:"1.2rem"
     }
   }));
 

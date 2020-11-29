@@ -95,11 +95,11 @@ export default myStyles(class App extends Component {
                  />
              </div>
              <Button 
+             className={classes.showBtn}
              // Using this event I switch users(hide , unhide, hide, unhide)
              onClick={this.handleShowPerson}
           //   className={classes.root}
              variant="contained"
-             color="secondary"
              > 
              Show Customers 
              </Button>
