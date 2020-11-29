@@ -4,10 +4,10 @@ import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
 import {Button, Input, Fab }from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
-import Page from "react-page-loading";
+import myStyles from "./AppStyle.jsx";
+import {FcCustomerSupport} from "react-icons/fc";
 
-
-export default (class App extends Component {
+export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
     state = { 
@@ -61,7 +61,7 @@ export default (class App extends Component {
 
     render() {
         //To catch Material-Ui from... 
-        //const {classes} = this.props
+        const {classes} = this.props
         const {persons, showPersons} = this.state
         // Person is empty at first1
         let person = null;
@@ -74,9 +74,9 @@ export default (class App extends Component {
         }
 
         return (
-             <div>
-             <h2>Customer Manager</h2>
-             <h3>Number of customers ➡️ {persons.length} !</h3>
+             <div className={classes.header}>
+             <h2 className={classes.h2}>Customer Manager</h2>
+             <h3>Number of customers <FcCustomerSupport /> &nbsp; {persons.length} </h3>
              <div>
              <Fab 
              color="primary" 

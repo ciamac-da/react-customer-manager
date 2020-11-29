@@ -6,16 +6,16 @@ const useStyles = withStyles((theme) => ({
         margin: theme.spacing(1),
       },
     },
-    persons:{
-      backgroundColor: "red",
-      color:"white",
-      borderRadius: ".7rem",
-      textAlign: "center",
+    header:{
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center" 
+    },
+    h2: {
+      color: "orange",
       fontWeight: "bolder",
-      fontSize: "1rem",
-      "&:hover":{
-        backgroundColor: "gray !important"
-      }
+      fontSize:"2rem"
     }
   }));
 
