@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "1rem",
       marginBottom: "1rem",
       "&:hover":{
-        backgroundColor: "gray !important"
+        backgroundColor: "silver !important"
       }
     },
     input:{
