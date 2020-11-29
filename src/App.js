@@ -26,11 +26,18 @@ export default myStyles(class App extends Component {
         const persons = [...this.state.persons]
         const filteredPersons = persons.filter(p => p.id !== id)
         this.setState({persons: filteredPersons})
-
-
-
     }
 
+    handleNameChange = (event, id)=>{
+        const {persons : allPersons} = this.state;
+        const personIndex = allPersons.findIndex(p => p.id === id);
+        const person = allPersons[personIndex]
+        // to change names
+        person.fullname = event.target.value;
+        // overwrite the names
+        allPersons[personIndex] = person;
+        this.setState({persons : allPersons});
+    }
     render() {
         //To catch Material-Ui from... 
         const {classes} = this.props
