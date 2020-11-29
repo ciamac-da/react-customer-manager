@@ -43,8 +43,13 @@ export default (class App extends Component {
       const person ={
           id : Math.floor(Math.random() * 10000),
           fullname : this.state.person
-
       } 
+      persons.push(person)
+      this.setState({persons, person:""})
+  };
+
+  setPerson = event => {
+      this.setState({ person: event.target.value})
   }
 
 
@@ -66,10 +71,19 @@ export default (class App extends Component {
              <h2>Customer Manager</h2>
              <h3>Number of customers ➡️ {persons.length} !</h3>
              <div>
-             <Fab color="primary" aria-label="add">
+             <Fab 
+             color="primary" 
+             aria-label="add"
+             onClick={this.handleNewPerson}
+             >
               <AddIcon />
             </Fab>
-                 <Input type="text" placeholder="Add New Customer" />
+                 <Input 
+                 type="text" 
+                 placeholder="Add New Customer" 
+                 onChange= {this.setPerson}
+                 value= {this.state.person}
+                 />
              </div>
              <Button 
              // Using this event I switch users(hide , unhide, hide, unhide)
