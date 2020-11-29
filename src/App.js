@@ -32,11 +32,14 @@ export default myStyles(class App extends Component {
         const {persons : allPersons} = this.state;
         const personIndex = allPersons.findIndex(p => p.id === id);
         const person = allPersons[personIndex]
+        console.log("Person ==>",person);
         // to change names
         person.fullname = event.target.value;
+        // to get a copy of all persons
+        const persons = [...allPersons];
         // overwrite the names
-        allPersons[personIndex] = person;
-        this.setState({persons : allPersons});
+        persons[personIndex] = person;
+        this.setState({persons});
     }
     render() {
         //To catch Material-Ui from... 
@@ -47,6 +50,7 @@ export default myStyles(class App extends Component {
         if(showPersons){
             person =  <Persons persons={persons} 
             personDelete={this.handleDeletePerson}
+            personChange = {this.handleNameChange}
             />
         }
 
