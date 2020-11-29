@@ -66,12 +66,8 @@ export default (class App extends Component {
              > 
              Show Customers 
              </Button>
-             <p 
-            // style={{backgroundColor:"red"}}
-            // className={classes.persons}
-             >
+           
              {person}
-             </p>
         </div> );
     }
 }
