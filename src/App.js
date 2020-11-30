@@ -91,7 +91,7 @@ export default myStyles(class App extends Component {
                  placeholder="Add New Customer" 
                  onChange= {this.setPerson}
                  value= {this.state.person}
-                 className={classes.mui}
+                 className={classes.input}
                  />
              </div>
              <Button 

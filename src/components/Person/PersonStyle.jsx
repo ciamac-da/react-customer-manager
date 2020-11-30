@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
       marginTop: "1rem",
       marginBottom: "1rem",
       "&:hover":{
-        backgroundColor: "silver !important"
+        boxShadow: ".1rem .1rem .3rem .2rem silver"
       }
     },
     input:{
@@ -51,8 +51,8 @@ const useStyles = makeStyles((theme) => ({
      marginTop: ".5rem",
      marginBottom: ".5rem",
      fontWeight:"bolder",
-     fontSize:"1.2rem",
-     color:"black"
+     fontSize:"1.5rem",
+     color:"white",
     }
   }));
 

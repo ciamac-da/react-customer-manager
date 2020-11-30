@@ -41,6 +41,10 @@ const useStyles = withStyles((theme) => ({
       margin: "2rem",
       fontSize:"1.2rem",
       color:"white"
+    },
+    input: {
+      color:"white",
+      textDecoration:"none"
     }
   }));
 
