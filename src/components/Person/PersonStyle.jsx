@@ -34,17 +34,19 @@ const useStyles = makeStyles((theme) => ({
       jusifyContent: "center",
     },
     buttonSave:{
+      color: "white",      
       backgroundColor:"green",
       margin: ".9rem",
       "&:hover":{
-        backgroundColor:"orange"
+        backgroundColor:"silver"
       }
      },
     buttonDel:{
-     backgroundColor:"red",
+      color: "white",      
+      backgroundColor:"red",
      margin: ".9rem",
      "&:hover":{
-       backgroundColor:"orange"
+       backgroundColor:"silver"
      }
     },
     names:{
