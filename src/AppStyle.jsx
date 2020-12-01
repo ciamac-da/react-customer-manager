@@ -40,7 +40,12 @@ const useStyles = withStyles((theme) => ({
       backgroundColor: "orange",
       margin: "2rem",
       fontSize:"1.2rem",
-      color:"white"
+      color:"white",
+      fontWeight: "bolder",
+      "&:hover": {
+        color:"orange",
+        fontWeight: "bolder",
+      }
     },
     input: {
       color:"white",
