@@ -29,7 +29,10 @@ const useStyles = withStyles((theme) => ({
     fab: {
       color: "white",
       backgroundColor: "orange",
-      marginRight: "1rem"
+      marginRight: "1rem",
+      "&:hover": {
+        color: "orange"
+      }
     },
     fabIn:{
       display: "flex",

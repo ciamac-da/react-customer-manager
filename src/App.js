@@ -6,7 +6,8 @@ import {Button, Input, Fab }from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import myStyles from "./AppStyle.jsx";
 import {FcCustomerSupport} from "react-icons/fc";
-import "./index.css";
+import { ToastContainer, toast } from 'react-toastify';
+
 
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
@@ -51,8 +52,14 @@ export default myStyles(class App extends Component {
           id : Math.floor(Math.random() * 10000),
           fullname : this.state.person
       } 
-      persons.push(person)
-      this.setState({persons, person:""})
+      if(person.fullname !== "" && person.fullname !== " "){
+          this.setState({persons, person:""})
+          persons.push(person)
+          toast.success("New Customer added successfully",{
+            position: "bottom-right",  
+            closeButton: true,
+          });
+      }
   };
 
   setPerson = event => {
@@ -103,7 +110,7 @@ export default myStyles(class App extends Component {
              > 
              Show Customers 
              </Button>
-             
+             <ToastContainer />
              {person}
         </div> );
     }
