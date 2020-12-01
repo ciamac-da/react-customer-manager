@@ -62,7 +62,9 @@ export default myStyles(class App extends Component {
       if(person.fullname !== "" && person.fullname !== " "){
           this.setState({persons, person:""})
           persons.push(person)
-          toast.success(`${person.fullname} added successfully`,{
+          
+          //toastify new person
+          toast.success(`${person.fullname} was added successfully`,{
             position: "bottom-right",  
             closeButton: true,
           });
