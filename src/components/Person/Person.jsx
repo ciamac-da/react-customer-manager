@@ -3,10 +3,10 @@ import Button from '@material-ui/core/Button';
 import useStyles from "./PersonStyle";
 import { Typography, Input } from '@material-ui/core';
 import Page from "react-page-loading";
-import Reveal from 'react-reveal/Reveal';
 import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
-//import useStyles from '../../AppStyle';
+import {toast} from "react-toastify";
+//import useStyles from '../../AppStyle'
 const Person =({fullname,personSave, personDelete, personChange})=>{
     const classes = useStyles();
 return(

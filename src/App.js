@@ -31,6 +31,13 @@ export default myStyles(class App extends Component {
         const persons = [...this.state.persons]
         const filteredPersons = persons.filter(p => p.id !== id)
         this.setState({persons: filteredPersons})
+        
+        // t acceess to person and passing it inside of toastify message
+        const personIndex = persons.findIndex(p => p.id === id);
+        const person = persons[personIndex]
+        toast.error(`${person.fullname} was deleted successfully!`,{
+        position:"bottom-right"
+        })
     }
 
     handleNameChange = (event, id)=>{
