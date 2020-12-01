@@ -62,7 +62,7 @@ export default myStyles(class App extends Component {
       if(person.fullname !== "" && person.fullname !== " "){
           this.setState({persons, person:""})
           persons.push(person)
-          toast.success("New Customer added successfully",{
+          toast.success(`${person.fullname} added successfully`,{
             position: "bottom-right",  
             closeButton: true,
           });
@@ -91,7 +91,7 @@ export default myStyles(class App extends Component {
         return (
              <div className={classes.header}>
              <h2 className={classes.h2}>Customer Manager <FcCustomerSupport /></h2>
-             <h3 className={classes.h3}>Number of customers  &nbsp; {persons.length} </h3>
+             <h3 className={classes.h3}>Number of customers  &nbsp; <span className={classes.span}>{persons.length}</span> </h3>
              <div className={classes.fabIn}>
              <Fab 
              className={classes.fab}
