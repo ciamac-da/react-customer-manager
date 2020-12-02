@@ -11,7 +11,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
     return(
 
     <Page loader={"bar"} color={"white"} size={9} duration={1}>
-     <Card className={classes.card}>
+     <Card className={classes.cardi}>
         <Typography
          component="p" 
          variant="body2" 
@@ -25,7 +25,6 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
           placeholder={fullname} 
          onChange={personChange}
           />
-      <CardActions>
       <div className={classes.buttons}>
         <Button 
         variant="contained" 
@@ -46,7 +45,6 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         Delete
         </Button>
         </div>
-      </CardActions>
     </Card>
     </Page>
 );

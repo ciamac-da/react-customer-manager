@@ -1,7 +1,7 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-   card: {
+   cardi: {
     width: 345,
     backgroundColor:"orange"
   },
@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     },
     buttons:{
       display: "flex",
-      jusifyContent: "center",
+      jusifyContent: "center !important",
     },
     buttonSave:{
       color: "white",      
