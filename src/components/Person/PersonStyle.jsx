@@ -1,29 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-    root: {
-      '& > *': {
-        margin: theme.spacing(1),
-      },
-    },
-    persons:{
-      backgroundColor: "orange",
-      color:"white",
-      borderRadius: ".7rem",
-      textAlign: "center",
-      fontWeight: "bolder",
-      fontSize: "1rem",
-      width: "70%",
-      display: "flex",
-      flexDirection:"column",
-      alignItems:"center",
-      margin:"auto",
-      marginTop: "1rem",
-      marginBottom: "1rem",
-      "&:hover":{
-        boxShadow: ".1rem .1rem .3rem .2rem silver"
-      }
-    },
+   card: {
+    width: 345,
+    backgroundColor:"orange"
+  },
+  media: {
+    height: 240,
+  },
     input:{
       textAlign:"center !important",
       borderRadius:".5rem",
@@ -55,6 +39,11 @@ const useStyles = makeStyles((theme) => ({
      fontWeight:"bolder",
      fontSize:"1.5rem",
      color:"white",
+     backgroundColor:"silver",
+     display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    flexDirection: "column"
     }
   }));
 

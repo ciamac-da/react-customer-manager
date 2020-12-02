@@ -1,30 +1,32 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
 import useStyles from "./PersonStyle";
-import { Typography, Input } from '@material-ui/core';
+import { Typography, Input, Card, TextField,Paper,TableRow, CardActions, CardContent, Button } from '@material-ui/core';
 import Page from "react-page-loading";
 import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
-import {toast} from "react-toastify";
 //import useStyles from '../../AppStyle'
 const Person =({fullname,personSave, personDelete, personChange})=>{
-    const classes = useStyles();
-return(
-    <div className={classes.persons}>
+
+  const classes = useStyles()
+    return(
 
     <Page loader={"bar"} color={"white"} size={9} duration={1}>
+     <Card className={classes.card}>
         <Typography
-        className={classes.names}
-        >
+         component="p" 
+         variant="body2" 
+       //  className={classes.names}
+          >
         {`${fullname}`}
-        </Typography>
-        <Input 
-        className={classes.input} 
-        type="text" 
-        placeholder={fullname} onChange={personChange}
-        disableUnderline
-        />
-        <div className={classes.buttons}>
+          </Typography>
+          <TextField 
+          label="Change the Name" 
+          variant="filled" 
+          placeholder={fullname} 
+         onChange={personChange}
+          />
+      <CardActions>
+      <div className={classes.buttons}>
         <Button 
         variant="contained" 
         onClick={personSave}
@@ -44,8 +46,9 @@ return(
         Delete
         </Button>
         </div>
+      </CardActions>
+    </Card>
     </Page>
-    </div>
 );
 }
  
