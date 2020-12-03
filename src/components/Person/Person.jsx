@@ -6,25 +6,29 @@ import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
 //import useStyles from '../../AppStyle'
 const Person =({fullname,personSave, personDelete, personChange})=>{
-
+  
   const classes = useStyles()
-    return(
+  
+  return(
 
     <Page loader={"bar"} color={"white"} size={9} duration={1}>
-     <Card className={classes.cardi}>
-        <Typography
-         component="p" 
-         variant="body2" 
-       //  className={classes.names}
-          >
-        {`${fullname}`}
-          </Typography>
-          <TextField 
+    <Paper>
+
+     <Card className={classes.myCard}>
+     <TextField 
           label="Change the Name" 
           variant="filled" 
           placeholder={fullname} 
          onChange={personChange}
           />
+        <Typography
+         component="p" 
+         variant="body2" 
+        className={classes.names}
+          >
+        {`${fullname}`}
+          </Typography>
+        
       <div className={classes.buttons}>
         <Button 
         variant="contained" 
@@ -46,6 +50,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         </Button>
         </div>
     </Card>
+    </Paper>
     </Page>
 );
 }

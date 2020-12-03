@@ -1,12 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
-   cardi: {
+   myCard: {
+    maxWidth: 345,
     width: 345,
-    backgroundColor:"orange"
-  },
-  media: {
     height: 240,
+    backgroundColor:"orange"
   },
     input:{
       textAlign:"center !important",
