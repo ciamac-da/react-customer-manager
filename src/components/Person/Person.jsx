@@ -1,6 +1,6 @@
 import React from 'react';
 import useStyles from "./PersonStyle";
-import { Typography, Input,Grid, Card, TextField,Paper,TableRow, CardActions, CardContent, Button } from '@material-ui/core';
+import { Typography, Input,Grid, Card, TextField,Paper,TableRow, CardActionArea ,CardActions, CardContent, Button } from '@material-ui/core';
 import Page from "react-page-loading";
 import { ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
 import {RiDeleteBin2Fill} from "react-icons/ri";
@@ -26,7 +26,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
     <Paper>
 
      <Card className={classes.myCard}>
-
+<CardActionArea>
 
         <div className={classes.input}>
         <Grid container  alignItems="flex-end">
@@ -47,8 +47,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         </Grid>
       </div>
 
-
-
+       <CardContent>
         <Typography
          variant="body2" 
          color="textSecondary" 
@@ -57,7 +56,10 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
           >
         {`${fullname}`}
           </Typography>
-        
+       </CardContent>
+       </CardActionArea>
+       
+        <CardActions>
       <div className={classes.buttons}>
         <Button 
         variant="contained" 
@@ -78,6 +80,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         Delete
         </Button>
         </div>
+        </CardActions>
     </Card>
     </Paper>
     </Page>

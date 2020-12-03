@@ -5,31 +5,34 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     width: 345,
     height: 240,
-    backgroundColor:"orange"
+    backgroundColor:"orange !important"
   },
     input:{
       textAlign:"center !important",
-      backgroundColor:"white", 
-      jusifyContent:"center"
+      backgroundColor:"white !important", 
+      jusifyContent:"center",
+      display: "flex",
+      alignItems:"center",
+
     },
     buttons:{
       display: "flex",
-      jusifyContent: "center !important",
+      jusifyContent: "center",
+      alignItems:"center",
+      padding:"0px"
     },
     buttonSave:{
-      color: "white",      
-      backgroundColor:"green",
-      margin: ".9rem",
+      color: "white !important",      
+      backgroundColor:"green !important",
       "&:hover":{
-        backgroundColor:"silver"
+        backgroundColor:"silver !important"
       }
      },
     buttonDel:{
-      color: "white",      
-      backgroundColor:"red",
-     margin: ".9rem",
+      color: "white !important",      
+      backgroundColor:"red !important",
      "&:hover":{
-       backgroundColor:"silver"
+       backgroundColor:"silver !important"
      }
     },
     names:{
@@ -37,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
      marginBottom: ".5rem",
      fontWeight:"bolder",
      wordBreak:"break-word",
-     color:"white",
+     color:"white !important",
      fontSize:"1rem"
     }
   }));
