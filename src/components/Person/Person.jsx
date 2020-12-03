@@ -1,9 +1,20 @@
 import React from 'react';
 import useStyles from "./PersonStyle";
-import { Typography, Input, Card, TextField,Paper,TableRow, CardActions, CardContent, Button } from '@material-ui/core';
+import { Typography, Input,Grid, Card, TextField,Paper,TableRow, CardActions, CardContent, Button } from '@material-ui/core';
 import Page from "react-page-loading";
+import { ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
 import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import { orange } from '@material-ui/core/colors';
+
+const theme = createMuiTheme({
+  palette: {
+    primary: orange,
+  },
+});
+
 //import useStyles from '../../AppStyle'
 const Person =({fullname,personSave, personDelete, personChange})=>{
   
@@ -15,16 +26,34 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
     <Paper>
 
      <Card className={classes.myCard}>
-     <TextField 
-          label="Change the Name" 
-          variant="filled" 
-          placeholder={fullname} 
-         onChange={personChange}
-          />
+
+
+        <div className={classes.input}>
+        <Grid container  alignItems="flex-end">
+          <Grid item>
+            <AccountCircle />
+            &nbsp;
+          </Grid>
+          <Grid item>
+          <ThemeProvider theme={theme}>
+            <TextField
+             id="input-with-icon-grid" 
+             label="Modify the Name" 
+             placeholder={fullname} 
+             onChange={personChange}
+             />
+             </ThemeProvider>
+          </Grid>
+        </Grid>
+      </div>
+
+
+
         <Typography
-         component="p" 
          variant="body2" 
-        className={classes.names}
+         color="textSecondary" 
+         component="p"
+         className={classes.names}
           >
         {`${fullname}`}
           </Typography>

@@ -10,7 +10,8 @@ const useStyles = withStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
     flexDirection: "column",
-    alignItems: "center" 
+    alignItems: "center" ,
+    margin: "auto"
     },
     h2: {
       display:"flex",

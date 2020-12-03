@@ -1,4 +1,4 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, ThemeProvider, createMuiTheme,  } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
    myCard: {
@@ -9,8 +9,8 @@ const useStyles = makeStyles((theme) => ({
   },
     input:{
       textAlign:"center !important",
-      borderRadius:".5rem",
-      backgroundColor:"white"
+      backgroundColor:"white", 
+      jusifyContent:"center"
     },
     buttons:{
       display: "flex",
@@ -36,13 +36,9 @@ const useStyles = makeStyles((theme) => ({
      marginTop: ".5rem",
      marginBottom: ".5rem",
      fontWeight:"bolder",
-     fontSize:"1.5rem",
+     wordBreak:"break-word",
      color:"white",
-     backgroundColor:"silver",
-     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column"
+     fontSize:"1rem"
     }
   }));
 
