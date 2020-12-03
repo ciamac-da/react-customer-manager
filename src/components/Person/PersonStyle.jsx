@@ -13,11 +13,10 @@ const useStyles = makeStyles((theme) => ({
       jusifyContent:"center",
       display: "flex",
       alignItems:"center",
-
     },
     buttons:{
       display: "flex",
-      jusifyContent: "center",
+      jusifyContent: "center !important",
       alignItems:"center",
       padding:"0px"
     },
@@ -41,7 +40,9 @@ const useStyles = makeStyles((theme) => ({
      fontWeight:"bolder",
      wordBreak:"break-word",
      color:"white !important",
-     fontSize:"1rem"
+     fontSize:"1rem",
+     height:"105px"
+
     }
   }));
 
