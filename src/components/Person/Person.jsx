@@ -26,7 +26,6 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
     <Paper>
 
      <Card className={classes.myCard}>
-
         <div className={classes.input}>
         <Grid 
         container  

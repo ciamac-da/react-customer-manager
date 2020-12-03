@@ -5,7 +5,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     width: 345,
     height: 240,
-    backgroundColor:"orange !important"
+    backgroundColor:"orange !important",
+    marginBottom:"1rem"
   },
     input:{
       textAlign:"center !important",
@@ -45,9 +46,10 @@ const useStyles = makeStyles((theme) => ({
      fontWeight:"bolder",
      wordBreak:"break-word",
      color:"white !important",
-     fontSize:"1rem",
-     height:"6.3rem"
-
+     fontSize:"1.4rem",
+     height:"6.3rem",
+     justifyContent:"center",
+     textAlign:"center"
     }
   }));
 
