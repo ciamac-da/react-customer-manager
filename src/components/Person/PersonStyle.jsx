@@ -10,19 +10,20 @@ const useStyles = makeStyles((theme) => ({
     input:{
       textAlign:"center !important",
       backgroundColor:"white !important", 
-      jusifyContent:"center",
-      display: "flex",
-      alignItems:"center",
+      justifyContent:"center !important",
+      display: "flex !important",
+      alignItems:"center !important",
     },
     buttons:{
       display: "flex",
-      jusifyContent: "center !important",
+      justifyContent: "center !important",
       alignItems:"center",
       padding:"0px"
     },
     buttonSave:{
       color: "white !important",      
       backgroundColor:"green !important",
+      marginRight:"2rem",
       "&:hover":{
         backgroundColor:"silver !important"
       }
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
      wordBreak:"break-word",
      color:"white !important",
      fontSize:"1rem",
-     height:"105px"
+     height:"6rem"
 
     }
   }));

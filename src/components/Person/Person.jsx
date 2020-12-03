@@ -26,7 +26,6 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
     <Paper>
 
      <Card className={classes.myCard}>
-<CardActionArea>
 
         <div className={classes.input}>
         <Grid container  alignItems="flex-end">
@@ -57,9 +56,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         {`${fullname}`}
           </Typography>
        </CardContent>
-       </CardActionArea>
-       
-        <CardActions>
+      <CardActionArea>
       <div className={classes.buttons}>
         <Button 
         variant="contained" 
@@ -80,7 +77,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         Delete
         </Button>
         </div>
-        </CardActions>
+       </CardActionArea>
     </Card>
     </Paper>
     </Page>
