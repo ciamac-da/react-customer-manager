@@ -43,13 +43,14 @@ const useStyles = makeStyles((theme) => ({
     names:{
      marginTop: ".5rem",
      marginBottom: ".5rem",
-     fontWeight:"bolder",
+     fontWeight:"bolder !important",
      wordBreak:"break-word",
      color:"white !important",
      fontSize:"1.4rem !important",
      height:"6.3rem",
      justifyContent:"center",
-     textAlign:"center"
+     textAlign:"center",
+     textShadow:".2rem .2rem .3rem black"
     }
   }));
 
