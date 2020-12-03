@@ -14,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
       display: "flex !important",
       alignItems:"center !important",
     },
+    grid:{
+      display: "flex",
+      justifyContent:"center",
+    },
     buttons:{
       display: "flex",
       justifyContent: "center !important",
@@ -42,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
      wordBreak:"break-word",
      color:"white !important",
      fontSize:"1rem",
-     height:"6rem"
+     height:"6.3rem"
 
     }
   }));

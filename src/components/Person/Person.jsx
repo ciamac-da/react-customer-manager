@@ -28,9 +28,14 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
      <Card className={classes.myCard}>
 
         <div className={classes.input}>
-        <Grid container  alignItems="flex-end">
+        <Grid 
+        container  
+        alignItems="flex-end"
+        className={classes.grid}
+        >
           <Grid item>
             <AccountCircle />
+            &nbsp;
             &nbsp;
           </Grid>
           <Grid item>
