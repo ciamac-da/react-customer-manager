@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
      fontWeight:"bolder",
      wordBreak:"break-word",
      color:"white !important",
-     fontSize:"1.4rem",
+     fontSize:"1.4rem !important",
      height:"6.3rem",
      justifyContent:"center",
      textAlign:"center"
