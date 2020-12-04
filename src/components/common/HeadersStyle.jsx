@@ -15,6 +15,9 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: "bolder",
         fontSize:"1.5rem"
       },
+      span:{
+        color: "orange"
+      }
    }));
 
   export default useStyles;

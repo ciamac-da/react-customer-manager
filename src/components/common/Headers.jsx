@@ -3,7 +3,7 @@ import useStyles from './HeadersStyle';
 import {FcCustomerSupport} from "react-icons/fc";
 import { Typography } from '@material-ui/core';
 
-const Header = ({personsLenght}) => {
+const Header = ({personsLenght, appTitle}) => {
     const classes = useStyles()
     return (
         <>
@@ -11,7 +11,7 @@ const Header = ({personsLenght}) => {
              className={classes.h2}
              component="h2"
              >
-             Customer Manager 
+             {appTitle}
              <FcCustomerSupport />
              </Typography>
              <Typography 

@@ -92,7 +92,7 @@ export default myStyles(class App extends Component {
 
         return (
              <div className={classes.header}>
-            <Header  personsLenght={persons.length}/>
+            <Header  personsLenght={persons.length} appTitle={this.props.title}  />
              <div className={classes.fabIn}>
              <Fab 
              className={classes.fab}

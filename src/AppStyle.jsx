@@ -42,9 +42,7 @@ const useStyles = withStyles((theme) => ({
       color:"white",
       textDecoration:"none"
     },
-    span:{
-      color: "orange"
-    }
+    
   }));
 
   export default useStyles;
