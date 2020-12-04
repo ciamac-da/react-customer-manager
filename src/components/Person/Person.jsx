@@ -1,12 +1,11 @@
 import React from 'react';
 import useStyles from "./PersonStyle";
-import { Typography, Input,Grid, Card, TextField,Paper,TableRow, CardActionArea ,CardActions, CardContent, Button } from '@material-ui/core';
+import { Typography, Grid, Card, TextField,Paper, CardActionArea , CardContent, Button } from '@material-ui/core';
 import Page from "react-page-loading";
 import { ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
 import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
 import AccountCircle from '@material-ui/icons/AccountCircle';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import { orange } from '@material-ui/core/colors';
 
 const theme = createMuiTheme({
@@ -41,7 +40,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
           <ThemeProvider theme={theme}>
             <TextField
              id="input-with-icon-grid" 
-             label="Modify the Name" 
+             label="Click here to modify" 
              placeholder={fullname} 
              onChange={personChange}
              />

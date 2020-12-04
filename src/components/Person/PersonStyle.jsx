@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     buttonSave:{
       color: "white !important",      
       backgroundColor:"green !important",
-      marginRight:"2rem",
+      marginRight:"2rem !important",
       "&:hover":{
         backgroundColor:"silver !important"
       }
