@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAAA,EACI,wCACJ,CACA,KACI,qBACJ","file":"main.f4606342.chunk.css","sourcesContent":["*{\n    font-family: 'Cairo', sans-serif !important;\n}\nbody{\n    background-color: gray;\n}\n"]}
