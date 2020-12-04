@@ -5,7 +5,6 @@ import Persons from "./components/Person/Persons.jsx";
 import {Button, Input, Fab }from '@material-ui/core';
 import AddIcon from '@material-ui/icons/Add';
 import myStyles from "./AppStyle.jsx";
-import {FcCustomerSupport} from "react-icons/fc";
 import { ToastContainer, toast } from 'react-toastify';
 
 
@@ -92,8 +91,7 @@ export default myStyles(class App extends Component {
 
         return (
              <div className={classes.header}>
-             <h2 className={classes.h2}>Customer Manager <FcCustomerSupport /></h2>
-             <h3 className={classes.h3}>Number of customers  &nbsp; <span className={classes.span}>{persons.length}</span> </h3>
+            
              <div className={classes.fabIn}>
              <Fab 
              className={classes.fab}
