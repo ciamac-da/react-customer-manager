@@ -1,5 +1,5 @@
 import React from 'react';
-import useStyles from '../../AppStyle';
+import useStyles from './HeadersStyle';
 import {FcCustomerSupport} from "react-icons/fc";
 import { Typography } from '@material-ui/core';
 

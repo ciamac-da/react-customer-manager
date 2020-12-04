@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
 import {Button, Input, Fab }from '@material-ui/core';
+import Header from "./components/common/Headers.jsx";
 import AddIcon from '@material-ui/icons/Add';
 import myStyles from "./AppStyle.jsx";
 import { ToastContainer, toast } from 'react-toastify';
@@ -91,7 +92,7 @@ export default myStyles(class App extends Component {
 
         return (
              <div className={classes.header}>
-            
+            <Header />
              <div className={classes.fabIn}>
              <Fab 
              className={classes.fab}
