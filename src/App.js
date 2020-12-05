@@ -15,12 +15,14 @@ export default myStyles(class App extends Component {
     state = { 
         persons:[],
         // The list of customers should be hidden at fisrt, therefore I Should set it to false!
+        person:"",
         showPersons: false
     }
+    // Switch show person off/on
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
     }
-
+   // To save person!
     handleSavePerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
     }

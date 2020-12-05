@@ -2,7 +2,9 @@ import React from 'react';
 import useStyles from './HeadersStyle';
 import {FcCustomerSupport} from "react-icons/fc";
 import { Typography } from '@material-ui/core';
-
+  
+//Here's header component!
+// Properties that I get are the lenght of persons and the title of page!
 const Header = ({personsLenght, appTitle}) => {
     const classes = useStyles()
     return (
