@@ -7,8 +7,7 @@ import myStyles from "./AppStyle.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import SimpleContext from './context/SimpleContext';
 import NewPerson from './components/NewPerson/NewPerson.jsx';
-import {Button }from '@material-ui/core';
-
+import ShowPerson from './components/ShowPerson/ShowPerson';
 
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
@@ -110,16 +109,8 @@ export default myStyles(class App extends Component {
              //personsLenght={persons.length} appTitle={this.state.appTitle}  
              />
              <NewPerson />
-             <Button 
-             className={classes.showBtn}
-             // Using this event I switch users(hide , unhide, hide, unhide)
-             onClick={this.handleShowPerson}
-             //   className={classes.root}
-             variant="contained"
-             > 
-             Show Customers 
-             </Button>
-            <ToastContainer />
+             <ShowPerson/>
+             <ToastContainer />
             {person}
             </div>
             </SimpleContext.Provider>
