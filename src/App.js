@@ -14,8 +14,8 @@ export default myStyles(class App extends Component {
     // The new feauture of ES7 👽
     state = { 
         persons:[],
-        // The list of customers should be hidden at fisrt, therefore I Should set it to false!
         person:"",
+        // The list of customers should be hidden at fisrt, therefore I Should set it to false!
         showPersons: false
     }
     // Switch show person off/on
