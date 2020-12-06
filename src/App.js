@@ -105,7 +105,7 @@ export default myStyles(class App extends Component {
                 handleShowPerson: this.handleShowPerson,
                 setPerson: this.setPerson,
             }}>
-             <div className={classes.header}>
+             <div className={classes.all}>
             <Header 
              //personsLenght={persons.length} appTitle={this.state.appTitle}  
              />
