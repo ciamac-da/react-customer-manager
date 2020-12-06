@@ -7,7 +7,7 @@ import Header from "./components/common/Headers.jsx";
 import AddIcon from '@material-ui/icons/Add';
 import myStyles from "./AppStyle.jsx";
 import { ToastContainer, toast } from 'react-toastify';
-
+import SimpleContext from './context/SimpleContext';
 
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
@@ -16,7 +16,8 @@ export default myStyles(class App extends Component {
         persons:[],
         person:"",
         // The list of customers should be hidden at fisrt, therefore I Should set it to false!
-        showPersons: false
+        showPersons: false,
+        appTitle: "Customer Manager"
     }
     // Switch show person off/on
     handleShowPerson = () =>{

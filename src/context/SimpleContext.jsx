@@ -1,11 +1,10 @@
 import React, {createContext} from 'react';
 
-createContext({
+const SimpleContext = createContext({
     state: [],
-    handleShowPerson : ()=> {},
     handleDeletePerson : ()=> {},
-    handleSavePerson : ()=> {},
     handleNameChange : ()=> {},
     handleNewPerson : ()=> {},
     setPerson : ()=> {},
 })
+export default SimpleContext;

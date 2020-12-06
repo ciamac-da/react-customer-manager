@@ -4,4 +4,4 @@ import App from './App';
 import "./index.css";
 import 'react-toastify/dist/ReactToastify.css';
 
-render(<App title="Customer Manager"/>, document.getElementById("root"))
+render(<App />, document.getElementById("root"))
