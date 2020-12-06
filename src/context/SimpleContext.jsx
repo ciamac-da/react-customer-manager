@@ -5,6 +5,7 @@ const SimpleContext = createContext({
     handleDeletePerson : ()=> {},
     handleNameChange : ()=> {},
     handleNewPerson : ()=> {},
+    handleShowPerson : () => {},
     setPerson : ()=> {},
 })
 export default SimpleContext;

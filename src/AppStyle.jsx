@@ -13,20 +13,6 @@ const useStyles = withStyles((theme) => ({
     alignItems: "center" ,
     margin: "auto"
     },
-   
-    fab: {
-      color: "white",
-      backgroundColor: "orange",
-      marginRight: "1rem",
-      "&:hover": {
-        color: "orange"
-      }
-    },
-    fabIn:{
-      display: "flex",
-      justifyContent:"center",
-      margin: "1rem" 
-    },
     showBtn: {
       backgroundColor: "orange",
       margin: "2rem",
@@ -37,10 +23,6 @@ const useStyles = withStyles((theme) => ({
         color:"orange",
         fontWeight: "bolder",
       }
-    },
-    input: {
-      color:"white",
-      textDecoration:"none"
     },
     
   }));

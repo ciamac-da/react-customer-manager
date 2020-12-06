@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 //import Person from "./components/Person/Person.jsx";
 import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
-import {Button, Input, Fab }from '@material-ui/core';
 import Header from "./components/common/Headers.jsx";
-import AddIcon from '@material-ui/icons/Add';
 import myStyles from "./AppStyle.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import SimpleContext from './context/SimpleContext';
+import NewPerson from './components/NewPerson/NewPerson.jsx';
+import {Button }from '@material-ui/core';
+
 
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
@@ -94,36 +95,36 @@ export default myStyles(class App extends Component {
         }
 
         return (
+            <>
+            <SimpleContext.Provider
+            value={{
+                state: this.state,
+                handleNameChange: this.handleNameChange,
+                handleDeletePerson: this.handleDeletePerson,
+                handleNewPerson: this.handleNewPerson,
+                handleShowPerson: this.handleShowPerson,
+                setPerson: this.setPerson,
+            }}>
              <div className={classes.header}>
-            <Header  personsLenght={persons.length} appTitle={this.props.title}  />
-             <div className={classes.fabIn}>
-             <Fab 
-             className={classes.fab}
-             aria-label="add"
-             onClick={this.handleNewPerson}
-             >
-              <AddIcon />
-            </Fab>
-                 <Input 
-                 type="text" 
-                 placeholder="Add New Customer" 
-                 onChange= {this.setPerson}
-                 value= {this.state.person}
-                 className={classes.input}
-                 />
-             </div>
+            <Header 
+             //personsLenght={persons.length} appTitle={this.state.appTitle}  
+             />
+             <NewPerson />
              <Button 
              className={classes.showBtn}
              // Using this event I switch users(hide , unhide, hide, unhide)
              onClick={this.handleShowPerson}
-          //   className={classes.root}
+             //   className={classes.root}
              variant="contained"
              > 
              Show Customers 
              </Button>
-             <ToastContainer />
-             {person}
-        </div> );
+            <ToastContainer />
+            {person}
+            </div>
+            </SimpleContext.Provider>
+            </>
+         );
     }
 }
 )
