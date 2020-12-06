@@ -86,10 +86,11 @@ export default myStyles(class App extends Component {
         // Person is empty at first1
         let person = null;
         if(showPersons){
-            person =  <Persons persons={persons} 
-            personDelete={this.handleDeletePerson}
-            personChange = {this.handleNameChange}
-            personSave = {this.handleSavePerson}
+            person =  <Persons 
+            //persons={persons} 
+            //personDelete={this.handleDeletePerson}
+            //personChange = {this.handleNameChange}
+            //personSave = {this.handleSavePerson}
             />
         }
 
