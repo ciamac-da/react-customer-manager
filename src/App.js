@@ -27,6 +27,7 @@ export default myStyles(class App extends Component {
     handleSavePerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
     }
+    
 
     // To delete every single user!
     handleDeletePerson = id =>{
