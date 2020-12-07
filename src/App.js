@@ -19,6 +19,11 @@ export default myStyles(class App extends Component {
         showPersons: false,
         appTitle: "Customer Manager"
     }
+
+    static contextType = SimpleContext
+
+
+
     // Switch show person off/on
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
