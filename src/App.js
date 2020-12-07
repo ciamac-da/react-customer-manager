@@ -9,8 +9,10 @@ import SimpleContext from './context/SimpleContext';
 import NewPerson from './components/NewPerson/NewPerson.jsx';
 import ShowPerson from './components/ShowPerson/ShowPerson';
 
-export default myStyles(class App extends Component {
-    //Well I dont need c onstructor and super here and then this.state
+
+const App = () => {
+    return (  
+         //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
     state = { 
         persons:[],
@@ -78,7 +80,16 @@ export default myStyles(class App extends Component {
       this.setState({ person: event.target.value})
   }
 
+}
 
+  
+ 
+export default App;
+
+
+
+
+export default myStyles(class App extends Component {
     render() {
         //To catch Material-Ui from... 
         const {classes} = this.props
@@ -92,7 +103,8 @@ export default myStyles(class App extends Component {
             //personChange = {this.handleNameChange}
             //personSave = {this.handleSavePerson}
             />
-        }
+    );
+}
 
         return (
             <>
