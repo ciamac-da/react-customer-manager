@@ -11,7 +11,7 @@ import ShowPerson from './components/ShowPerson/ShowPerson';
 
 
 const App = () => {
-    return (  
+
          //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
     state = { 
@@ -79,56 +79,45 @@ const App = () => {
   setPerson = event => {
       this.setState({ person: event.target.value})
   }
+   //To catch Material-Ui from... 
+   const {classes} = this.props
+   const {persons, showPersons} = this.state
+   // Person is empty at first1
+   let person = null;
+   if(showPersons){
+       person =  <Persons 
+       //persons={persons} 
+       //personDelete={this.handleDeletePerson}
+       //personChange = {this.handleNameChange}
+       //personSave = {this.handleSavePerson}
+       />
 
-}
+    return (  
+        <>
+        <SimpleContext.Provider
+        value={{
+            state: this.state,
+            handleNameChange: this.handleNameChange,
+            handleDeletePerson: this.handleDeletePerson,
+            handleNewPerson: this.handleNewPerson,
+            handleShowPerson: this.handleShowPerson,
+            setPerson: this.setPerson,
+        }}>
+         <div className={classes.all}>
+        <Header 
+         //personsLenght={persons.length} appTitle={this.state.appTitle}  
+         />
+         <NewPerson />
+         <ShowPerson/>
+         <ToastContainer />
+        {person}
+        </div>
+        </SimpleContext.Provider>
+        </>
 
-  
+
+    )}
+
+    }
  
 export default App;
-
-
-
-
-export default myStyles(class App extends Component {
-    render() {
-        //To catch Material-Ui from... 
-        const {classes} = this.props
-        const {persons, showPersons} = this.state
-        // Person is empty at first1
-        let person = null;
-        if(showPersons){
-            person =  <Persons 
-            //persons={persons} 
-            //personDelete={this.handleDeletePerson}
-            //personChange = {this.handleNameChange}
-            //personSave = {this.handleSavePerson}
-            />
-    );
-}
-
-        return (
-            <>
-            <SimpleContext.Provider
-            value={{
-                state: this.state,
-                handleNameChange: this.handleNameChange,
-                handleDeletePerson: this.handleDeletePerson,
-                handleNewPerson: this.handleNewPerson,
-                handleShowPerson: this.handleShowPerson,
-                setPerson: this.setPerson,
-            }}>
-             <div className={classes.all}>
-            <Header 
-             //personsLenght={persons.length} appTitle={this.state.appTitle}  
-             />
-             <NewPerson />
-             <ShowPerson/>
-             <ToastContainer />
-            {person}
-            </div>
-            </SimpleContext.Provider>
-            </>
-         );
-    }
-}
-)
