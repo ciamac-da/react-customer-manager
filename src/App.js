@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 //import Person from "./components/Person/Person.jsx";
 import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
@@ -8,19 +8,24 @@ import { ToastContainer, toast } from 'react-toastify';
 import SimpleContext from './context/SimpleContext';
 import NewPerson from './components/NewPerson/NewPerson.jsx';
 import ShowPerson from './components/ShowPerson/ShowPerson';
+import useStyles from './components/common/HeadersStyle';
 
 
 const App = () => {
 
          //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
-    state = { 
-        persons:[],
-        person:"",
-        // The list of customers should be hidden at fisrt, therefore I Should set it to false!
-        showPersons: false,
-        appTitle: "Customer Manager"
-    }
+   // state = { 
+   //     persons:[],
+   //     person:"",
+   //     // The list of customers should be hidden at fisrt, therefore I Should set it to false!
+   //     showPersons: false,
+   //     appTitle: "Customer Manager"
+   // }
+
+   const [getPersons, setPersons] = useState({persons:[]});
+   const [getSinglePerson, setSinglePerson] = useState({person:""})
+   
     // Switch show person off/on
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
@@ -80,7 +85,7 @@ const App = () => {
       this.setState({ person: event.target.value})
   }
    //To catch Material-Ui from... 
-   const {classes} = this.props
+   const classes = useStyles()
    const {persons, showPersons} = this.state
    // Person is empty at first1
    let person = null;
