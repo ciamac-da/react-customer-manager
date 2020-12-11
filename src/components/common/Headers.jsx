@@ -1,16 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import useStyles from './HeadersStyle';
 import {FcCustomerSupport} from "react-icons/fc";
 import { Typography } from '@material-ui/core';
 import SimpleContext from '../../context/SimpleContext';
 //Here's header component!
 // Properties that I get are the lenght of persons and the title of page!
-const Header = ({personsLenght}) => {
+const Header = ({personsLenght, appTitle}) => {
+    const context = useContext(SimpleContext)
+    const { persons } = context;
     const classes = useStyles()
     return (
-        <>
-        <SimpleContext.Consumer>
-        {context =>(
           <>
              <Typography 
              className={classes.h2}
@@ -28,14 +27,10 @@ const Header = ({personsLenght}) => {
              <span 
              className={classes.span}
              >
-             {context.state.persons.length}
+             {persons.length}
              </span> 
              </Typography>
           </>
         )}
-        </SimpleContext.Consumer>
-        </>
-      );
-}
  
 export default Header;

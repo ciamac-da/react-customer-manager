@@ -3,29 +3,28 @@ import React, { useState } from 'react';
 import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
 import Header from "./components/common/Headers.jsx";
-import myStyles from "./AppStyle.jsx";
+import useStyles from "./AppStyle.jsx";
 import { ToastContainer, toast } from 'react-toastify';
 import SimpleContext from './context/SimpleContext';
 import NewPerson from './components/NewPerson/NewPerson.jsx';
 import ShowPerson from './components/ShowPerson/ShowPerson';
-import useStyles from './components/common/HeadersStyle';
 
 
 const App = () => {
 
-   const [getPersons, setPersons] = useState({persons:[]});
-   const [getSinglePerson, setSinglePerson] = useState({person:""})
-   const [getShowPersons, setSHowPersons] = useState({showPersons: false})
+   const [getPersons, setPersons] = useState([]);
+   const [getSinglePerson, setSinglePerson] = useState("")
+   const [getShowPersons, setSHowPersons] = useState({showPersons: true})
 
    
     // Switch show person off/on
    const handleShowPerson = () =>{
         //this.setState({showPersons: !this.state.showPersons})
-        setSHowPersons({showPersons: !getShowPersons})
+        setSHowPersons(!getShowPersons)
     }
    // To save person!
    const handleSavePerson = () =>{
-        setSHowPersons({showPersons: !getShowPersons})
+        setSHowPersons(!getShowPersons)
     }
 
     // To delete every single user!
@@ -33,7 +32,7 @@ const App = () => {
         // to get a copy of customers list
         const persons = [...getPersons]
         const filteredPersons = persons.filter(p => p.id !== id)
-        setPersons({persons: filteredPersons})
+        setPersons(filteredPersons)
         
         // t acceess to person and passing it inside of toastify message
         const personIndex = persons.findIndex(p => p.id === id);
@@ -51,7 +50,7 @@ const App = () => {
         const persons = [...allPersons];
         // overwrite the names
         persons[personIndex] = person;
-        setPersons({persons});
+        setPersons(persons);
     }
 
  const handleNewPerson = () => {
@@ -62,8 +61,8 @@ const App = () => {
       } 
       if(person.fullname !== "" && person.fullname !== " "){
           persons.push(person)
-          setPersons({persons})
-          setSinglePerson({person:""})
+          setPersons(persons)
+          setSinglePerson("")
           
           //toastify new person
           toast.success(`${person.fullname} was added successfully`,{
@@ -74,7 +73,7 @@ const App = () => {
   };
 
  const setPerson = event => {
-      setSinglePerson({ person: event.target.value})
+      setSinglePerson(event.target.value)
   }
 
   let person = null;
@@ -88,16 +87,16 @@ const App = () => {
         <SimpleContext.Provider
         value={{
             persons: getPersons,
+            person: getSinglePerson,
             handleNameChange: handleNameChange,
+            handleSavePerson: handleSavePerson,
             handleDeletePerson: handleDeletePerson,
             handleNewPerson: handleNewPerson,
             handleShowPerson: handleShowPerson,
             setPerson: setPerson,
         }}>
          <div className={classes.all}>
-        <Header 
-         //personsLenght={persons.length} appTitle={this.state.appTitle}  
-         />
+        <Header appTitle="Customer Manager"/>
          <NewPerson />
          <ShowPerson/>
          <ToastContainer />

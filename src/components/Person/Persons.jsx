@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import Person from './Person';
 import SimpleContext from '../../context/SimpleContext';
 
 
 const Persons = () => {
+
+    const context = useContext(SimpleContext)
     return (
       <>
-      <SimpleContext.Consumer>
-          {context =>(
-              <>
-        {context.state.persons.map(person => (
+     
+        {context.persons.map(person => (
             <Person 
             key={person.id}
             fullname={person.fullname}
@@ -18,9 +18,7 @@ const Persons = () => {
             personChange={event=> context.handleNameChange(event, person.id)}
             />
         ))}
-              </>
-          )}
-      </SimpleContext.Consumer>
+     
     </> 
     );
 };
