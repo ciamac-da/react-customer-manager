@@ -1,17 +1,16 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import SimpleContext from '../../context/SimpleContext';
 import useStyles from './ShowPersonStyle';
 import {Button }from '@material-ui/core';
 
 const ShowPerson = () => {
 
+const context = useContext(SimpleContext)
 const classes = useStyles()
 
     return (
     <>
-<SimpleContext.Consumer>
-{context =>(
-<>
+
             <Button 
              className={classes.showBtn}
              // Using this event I switch users(hide , unhide, hide, unhide)
@@ -21,9 +20,7 @@ const classes = useStyles()
              > 
              Show Customers 
              </Button>
-</>
-)}
-</SimpleContext.Consumer>
+
     </>
 )
 }

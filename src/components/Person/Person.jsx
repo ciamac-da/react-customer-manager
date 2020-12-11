@@ -14,7 +14,6 @@ const theme = createMuiTheme({
   },
 });
 
-//import useStyles from '../../AppStyle'
 const Person =({fullname,personSave, personDelete, personChange})=>{
   
   const classes = useStyles()
