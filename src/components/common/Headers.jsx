@@ -5,7 +5,7 @@ import { Typography } from '@material-ui/core';
 import SimpleContext from '../../context/SimpleContext';
 //Here's header component!
 // Properties that I get are the lenght of persons and the title of page!
-const Header = ({personsLenght, appTitle}) => {
+const Header = ({personsLenght}) => {
     const classes = useStyles()
     return (
         <>
@@ -16,7 +16,7 @@ const Header = ({personsLenght, appTitle}) => {
              className={classes.h2}
              component="h2"
              >
-             {context.state.appTitle}
+
              <FcCustomerSupport />
              </Typography>
              <Typography 
