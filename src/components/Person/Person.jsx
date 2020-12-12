@@ -7,6 +7,7 @@ import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { orange } from '@material-ui/core/colors';
+import PropTypes from "prop-types";
 
 const theme = createMuiTheme({
   palette: {
@@ -86,4 +87,13 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
 );
 }
  
+
+Person.propTypes = {
+ fullname      : PropTypes.string,
+ personSave    : PropTypes.func, 
+ personDelete  : PropTypes.func, 
+ personChange  : PropTypes.func
+}
+
+
 export default Person;
