@@ -42,12 +42,13 @@ const App = () => {
         })
     }
 
-   const handleNameChange = (id)=>{
-        const {persons : allPersons} = getPersons;
+   const handleNameChange = (event, id)=>{
+        const allPersons = getPersons;
         const personIndex = allPersons.findIndex(p => p.id === id);
         const person = allPersons[personIndex]
         // to get a copy of all persons
         const persons = [...allPersons];
+        person.fullname = event.target.value
         // overwrite the names
         persons[personIndex] = person;
         setPersons(persons);

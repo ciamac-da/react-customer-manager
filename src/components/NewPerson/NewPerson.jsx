@@ -24,7 +24,7 @@ return(
     type="text" 
     placeholder="Add New Customer" 
     onChange= {context.setPerson}
-    value= {context.person}
+    
     className={classes.input}
     />
     </div>
