@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import useStyles from './HeadersStyle';
 import {FcCustomerSupport} from "react-icons/fc";
 import { Typography } from '@material-ui/core';
@@ -7,6 +7,15 @@ import SimpleContext from '../../context/SimpleContext';
 // Properties that I get are the lenght of persons and the title of page!
 const Header = ({personsLenght, appTitle}) => {
     const classes = useStyles()
+useEffect(()=>{
+  const timer = setTimeout(() => {
+    
+  },1000);
+  return () =>{
+    clearTimeout(timer)
+  };
+},[]);
+
     return (
         <>
         <SimpleContext.Consumer>

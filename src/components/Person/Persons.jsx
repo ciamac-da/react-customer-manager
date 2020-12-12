@@ -13,7 +13,7 @@ const Persons = () => {
             <Person 
             key={person.id}
             fullname={person.fullname}
-            personSave={()=> context.handleSavePerson(person.id)}
+            personSave={()=> context.handleShowPerson(person.id)}
             personDelete={()=> context.handleDeletePerson(person.id)}
             personChange={event=> context.handleNameChange(event, person.id)}
             />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useRef, useEffect,} from 'react';
 import SimpleContext from '../../context/SimpleContext';
 import useStyles from './NewPersonStyle';
 import AddIcon from '@material-ui/icons/Add';
@@ -9,6 +9,10 @@ import { Input, Fab }from '@material-ui/core';
 
 const NewPerson = () =>{
     const classes = useStyles();
+    const inputFocus = useRef(null)
+    useEffect(()=>{
+        inputFocus.current.focus()
+    })
 return(
     <>
     <SimpleContext.Consumer>
@@ -23,6 +27,7 @@ return(
     <AddIcon />
     </Fab>
     <Input 
+    ref={inputFocus}
     type="text" 
     placeholder="Add New Customer" 
     onChange= {contex.setPerson}

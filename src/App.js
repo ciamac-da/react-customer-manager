@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 //import Person from "./components/Person/Person.jsx";
 import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
@@ -12,6 +12,7 @@ import ShowPerson from './components/ShowPerson/ShowPerson';
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
+   
     state = { 
         persons:[],
         person:"",
