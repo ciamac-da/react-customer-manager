@@ -9,7 +9,6 @@ import SimpleContext from './context/SimpleContext';
 import NewPerson from './components/NewPerson/NewPerson.jsx';
 import ShowPerson from './components/ShowPerson/ShowPerson';
 
-
 const App = () => {
 
    const [getPersons, setPersons] = useState([]);
