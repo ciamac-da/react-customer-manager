@@ -40,7 +40,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
           <ThemeProvider theme={theme}>
             <TextField
              id="input-with-icon-grid" 
-             label="Click here to modify" 
+             label="Type here to modify" 
              placeholder={fullname} 
              onChange={personChange}
              />
