@@ -1,6 +1,6 @@
-import { makeStyles, ThemeProvider, createMuiTheme,  } from '@material-ui/core/styles';
+import { withStyles, ThemeProvider, createMuiTheme,  } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = withStyles((theme) => ({
    myCard: {
     maxWidth: 345,
     width: 345,

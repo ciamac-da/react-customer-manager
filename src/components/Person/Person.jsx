@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import useStyles from "./PersonStyle";
+import myStyles from "./PersonStyle";
 import { Typography, Grid, Card, TextField,Paper, CardActionArea , CardContent, Button } from '@material-ui/core';
 import Page from "react-page-loading";
 import { ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
@@ -8,6 +8,8 @@ import {AiTwotoneSave} from "react-icons/ai";
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { orange } from '@material-ui/core/colors';
 
+
+
 const theme = createMuiTheme({
   palette: {
     primary: orange,
@@ -15,11 +17,15 @@ const theme = createMuiTheme({
 });
 
 
-class Person extends Component{
+ export default myStyles(class Person extends Component{
+
+  componentWillUnmount() {
+    console.log("Person.jsx ComponentWillUnmount")
+  }
   render(){
   console.log("Person.jsx render()")
-   const {fullname,personSave, personDelete, personChange , classes} = this.props
-  
+   const {fullname,personSave, personDelete, personChange } = this.props;
+   const {classes} = this.props;
   return(
     <>
     <Page loader={"bar"} color={"white"} size={9} duration={1}>
@@ -89,7 +95,5 @@ class Person extends Component{
   )
   }
 }
+ )
 
-//import useStyles from '../../AppStyle'
-  
-export default Person;
