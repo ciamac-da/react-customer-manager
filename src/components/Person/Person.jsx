@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import useStyles from "./PersonStyle";
 import { Typography, Grid, Card, TextField,Paper, CardActionArea , CardContent, Button } from '@material-ui/core';
 import Page from "react-page-loading";
@@ -14,13 +14,14 @@ const theme = createMuiTheme({
   },
 });
 
-//import useStyles from '../../AppStyle'
-const Person =({fullname,personSave, personDelete, personChange})=>{
-  
-  console.log("Person.jsx render()")
-  const classes = useStyles()
-  return(
 
+class Person extends Component{
+  render(){
+  console.log("Person.jsx render()")
+   const {fullname,personSave, personDelete, personChange , classes} = this.props
+  
+  return(
+    <>
     <Page loader={"bar"} color={"white"} size={9} duration={1}>
     <Paper>
 
@@ -84,7 +85,11 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
     </Card>
     </Paper>
     </Page>
-);
+    </>
+  )
+  }
 }
- 
+
+//import useStyles from '../../AppStyle'
+  
 export default Person;

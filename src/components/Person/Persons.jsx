@@ -1,11 +1,14 @@
-import React from 'react';
+import React,{Component} from 'react';
 import Person from './Person';
 import SimpleContext from '../../context/SimpleContext';
 
 
-const Persons = () => {
-    return (
-      <>
+class Persons extends Component {
+
+    render(){
+        console.log("Persons.jsx rendered()");
+        return (
+            <>
       <SimpleContext.Consumer>
           {context =>(
               <>
@@ -24,5 +27,6 @@ const Persons = () => {
     </> 
     );
 };
- 
+}
+
 export default Persons ;

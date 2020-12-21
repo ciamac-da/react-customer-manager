@@ -33,6 +33,23 @@ export default myStyles(class App extends Component {
        console.log("App.js ComponentDidMount")
    }
 
+   shouldComponentUpdate(nextProps, nextState) {
+    console.log("Persons.jsx shouldComponentUpdate")
+    return true
+}
+
+
+   getSnapshotBeforeUpdate(prevProps, prevState){
+    console.log("Persons.jsx getSnapshotBeforeUpdate");
+    const snapshot = {prevProps, prevState}
+    return snapshot
+}
+
+   componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("App.js ComponentDidUpdate")
+    console.log(snapshot);
+   }
+
    static contextType = SimpleContext;
 
     // Switch show person off/on
