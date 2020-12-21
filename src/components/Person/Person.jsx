@@ -17,8 +17,8 @@ const theme = createMuiTheme({
 //import useStyles from '../../AppStyle'
 const Person =({fullname,personSave, personDelete, personChange})=>{
   
+  console.log("Person.jsx render()")
   const classes = useStyles()
-  
   return(
 
     <Page loader={"bar"} color={"white"} size={9} duration={1}>

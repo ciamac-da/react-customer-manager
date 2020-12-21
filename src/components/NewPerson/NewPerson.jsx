@@ -8,6 +8,7 @@ import { Input, Fab }from '@material-ui/core';
 
 
 const NewPerson = () =>{
+    console.log("New Person.jsx render()")
     const classes = useStyles();
     const inputFocus = useRef(null)
     useEffect(()=>{

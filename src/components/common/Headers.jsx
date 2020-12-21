@@ -6,6 +6,8 @@ import SimpleContext from '../../context/SimpleContext';
 //Here's header component!
 // Properties that I get are the lenght of persons and the title of page!
 const Header = ({personsLenght, appTitle}) => {
+  
+  console.log("Header.jsx render()")
     const classes = useStyles()
 useEffect(()=>{
   const timer = setTimeout(() => {

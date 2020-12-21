@@ -12,7 +12,11 @@ import ShowPerson from './components/ShowPerson/ShowPerson';
 export default myStyles(class App extends Component {
     //Well I dont need c onstructor and super here and then this.state
     // The new feauture of ES7 👽
-   
+    constructor(){
+        super()
+        console.log("App.js Constructor!");
+    }
+
     state = { 
         persons:[],
         person:"",
@@ -20,6 +24,17 @@ export default myStyles(class App extends Component {
         showPersons: false,
         appTitle: "Customer Manager"
     }
+
+   static getDerivedStateFromProps(props, state){
+       console.log("App.js getDrivedStateFromProps")
+       return state;
+   }
+   componentDidMount(){
+       console.log("App.js ComponentDidMount")
+   }
+
+   static contextType = SimpleContext;
+
     // Switch show person off/on
     handleShowPerson = () =>{
         this.setState({showPersons: !this.state.showPersons})
@@ -82,7 +97,8 @@ export default myStyles(class App extends Component {
 
 
     render() {
-        //To catch Material-Ui from... 
+        //To catch Material-Ui from...
+        console.log("App.js render()") 
         const {classes} = this.props
         const {persons, showPersons} = this.state
         // Person is empty at first1
