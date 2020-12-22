@@ -5,6 +5,16 @@ import SimpleContext from '../../context/SimpleContext';
 
 class Persons extends Component {
 
+
+//shouldComponentUpdate(nextProps, nextState) {
+//    console.log("Persons.jsx rendered")
+//    if(nextState !== this.context.state.persons){
+//        return true;
+//    }else{
+//        return false;
+//    }
+//}
+
     render(){
         console.log("Persons.jsx rendered()");
         return (
