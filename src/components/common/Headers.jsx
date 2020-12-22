@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import useStyles from './HeadersStyle';
 import {FcCustomerSupport} from "react-icons/fc";
 import { Typography } from '@material-ui/core';
@@ -6,8 +6,32 @@ import SimpleContext from '../../context/SimpleContext';
 //Here's header component!
 // Properties that I get are the lenght of persons and the title of page!
 const Header = ({personsLenght, appTitle}) => {
-    const context = useContext(SimpleContext)
-    const { persons } = context;
+   
+   console.log("Header.jsx rendered");
+  
+   const context = useContext(SimpleContext)
+   const { persons } = context;
+    
+   
+// 
+//   useEffect(()=>{
+//      console.log("Header.jsx useEffect()");
+//      const timer =setTimeout(() => {
+//          alert("Data saved!")
+//      }, 1000);
+//      return ()=>{
+//         console.log("Header.jsx Unmount");
+//         clearTimeout(timer)
+//      }
+//   },[persons])
+
+  //useEffect(()=>{
+  //   console.log("Header.jsx useEffect()");
+  //   setTimeout(() => {
+  //       alert("Data saved!")
+  //   }, 1000);
+  //},[persons])
+
     const classes = useStyles()
     return (
           <>
