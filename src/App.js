@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 //import Person from "./components/Person/Person.jsx";
 import Persons from "./components/Person/Persons.jsx";
 //import myStyles from "./AppStyle.jsx";
@@ -10,7 +10,6 @@ import NewPerson from './components/NewPerson/NewPerson.jsx';
 import ShowPerson from './components/ShowPerson/ShowPerson';
 
 const App = props => {
-
    const [getPersons, setPersons] = useState([]);
    const [getSinglePerson, setSinglePerson] = useState("")
    const [getShowPersons, setSHowPersons] = useState({showPersons: true})
