@@ -14,7 +14,6 @@ const App = props => {
    const [getSinglePerson, setSinglePerson] = useState("")
    const [getShowPersons, setSHowPersons] = useState({showPersons: true})
 
-   
     // Switch show person off/on
    const handleShowPerson = () =>{
         //this.setState({showPersons: !this.state.showPersons})
@@ -24,7 +23,6 @@ const App = props => {
    const handleSavePerson = () =>{
         setSHowPersons(!getShowPersons)
     }
-
     // To delete every single user!
    const handleDeletePerson = id =>{
         // to get a copy of customers list
@@ -32,7 +30,7 @@ const App = props => {
         const filteredPersons = persons.filter(p => p.id !== id)
         setPersons(filteredPersons)
         
-        // t acceess to person and passing it inside of toastify message
+        // to acceess to person and passing it inside of toastify message
         const personIndex = persons.findIndex(p => p.id === id);
         const person = persons[personIndex]
         toast.error(`${person.fullname} was deleted successfully!`,{
