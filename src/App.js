@@ -12,16 +12,16 @@ import ShowPerson from './components/ShowPerson/ShowPerson';
 const App = props => {
    const [getPersons, setPersons] = useState([]);
    const [getSinglePerson, setSinglePerson] = useState("")
-   const [getShowPersons, setSHowPersons] = useState({showPersons: true})
+   const [getShowPersons, setShowPersons] = useState({showPersons: true})
 
     // Switch show person off/on
    const handleShowPerson = () =>{
         //this.setState({showPersons: !this.state.showPersons})
-        setSHowPersons(!getShowPersons)
+        setShowPersons(!getShowPersons)
     }
    // To save person!
    const handleSavePerson = () =>{
-        setSHowPersons(!getShowPersons)
+        setShowPersons(!getShowPersons)
     }
     // To delete every single user!
    const handleDeletePerson = id =>{
