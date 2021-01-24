@@ -1,5 +1,4 @@
 import React, {useContext, useRef, useEffect} from 'react';
-import SimpleContext from '../../context/SimpleContext';
 import useStyles from './NewPersonStyle';
 import AddIcon from '@material-ui/icons/Add';
 import { Input, Fab }from '@material-ui/core';
@@ -7,8 +6,7 @@ import { Input, Fab }from '@material-ui/core';
 
 
 
-const NewPerson = () =>{
-    const context = useContext(SimpleContext)
+const NewPerson = ({ setPerson, handleNewPerson, person}) =>{
     const classes = useStyles();
     const focusInput = useRef(null)
     useEffect(()=>{
@@ -21,7 +19,7 @@ return(
      <Fab 
      className={classes.fab}
      aria-label="add"
-     onClick={context.handleNewPerson}
+     onClick={handleNewPerson}
      >
     <AddIcon />
     </Fab>
@@ -29,8 +27,8 @@ return(
     ref={focusInput}
     type="text" 
     placeholder="Add New Customer" 
-    onChange= {context.setPerson}
-    
+    onChange= {setPerson}
+    value={person}
     className={classes.input}
     />
     </div>

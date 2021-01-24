@@ -1,21 +1,18 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import Person from './Person';
-import SimpleContext from '../../context/SimpleContext';
 
 
-const Persons = () => {
+const Persons = ({persons, handleSavePerson, handleDeletePerson, handleNameChange}) => {
 
-    const context = useContext(SimpleContext)
     return (
       <>
-     
-        {context.persons.map(person => (
+        {persons.map(person => (
             <Person 
             key={person.id}
             fullname={person.fullname}
-            personSave={()=> context.handleSavePerson(person.id)}
-            personDelete={()=> context.handleDeletePerson(person.id)}
-            personChange={event=> context.handleNameChange(event, person.id)}
+            personSave={()=> handleSavePerson(person.id)}
+            personDelete={()=> handleDeletePerson(person.id)}
+            personChange={event=> handleNameChange(event, person.id)}
             />
         ))}
      
