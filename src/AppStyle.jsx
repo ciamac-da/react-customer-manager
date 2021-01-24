@@ -13,7 +13,17 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center" ,
     margin: "auto"
     },
-  
+    showBtn: {
+      backgroundColor: "orange",
+      margin: "2rem",
+      fontSize:"1.2rem",
+      color:"white",
+      fontWeight: "bolder",
+      "&:hover": {
+        color:"orange",
+        fontWeight: "bolder",
+      }
+    }
     
   }));
 
