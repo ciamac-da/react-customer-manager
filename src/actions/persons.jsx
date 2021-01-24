@@ -1,3 +1,5 @@
+import { clearPerson } from "./person";
+
 export const addPerson= (fullname)=>{
     return async(dispatch, getState)=>{
         const persons = [...getState().persons]
@@ -8,7 +10,7 @@ export const addPerson= (fullname)=>{
         if(person.fullname !== "" && person.fullname !== " "){
             persons.push(person)
            await({type:"ADD_PERSON", payload:persons})
-           //await dispatch(clearPerson())
+           await dispatch(clearPerson())
         }
     }
 }
