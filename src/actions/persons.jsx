@@ -22,3 +22,17 @@ export const deletePerson = (personId)=>{
           await dispatch({type:"DELETE_PERSON", payload: filteredPersons})
       }
 }
+
+export const updatePerson = (event, personId) =>{
+    return async (dispatch, getState)=>{
+        const allPersons = [...getState().persons];
+        const personIndex = allPersons.findIndex(p => p.id === personId);
+        const person = allPersons[personIndex]
+        // to get a copy of all persons
+        const persons = [...allPersons];
+        person.fullname = event.target.value
+        // overwrite the names
+        persons[personIndex] = person;
+        await dispatch({type:"UPDATE_PERSON", payload: person})
+    }
+}
