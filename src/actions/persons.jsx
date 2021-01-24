@@ -1,6 +1,6 @@
 export const addPerson= (fullname)=>{
     return async(dispatch, getState)=>{
-        const persons = [...getState.persons]
+        const persons = [...getState().persons]
         const person ={
             id : Math.floor(Math.random() * 1000),
             fullname 
@@ -11,4 +11,14 @@ export const addPerson= (fullname)=>{
            //await dispatch(clearPerson())
         }
     }
+}
+
+export const deletePerson = (personId)=>{
+      return async (dispatch, getState)=>{
+
+          // to get a copy of customers list
+          const persons = [...getState().persons]
+          const filteredPersons = persons.filter(p => p.id !== personId)
+          await dispatch({type:"DELETE_PERSON", payload: filteredPersons})
+      }
 }
