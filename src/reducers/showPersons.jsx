@@ -2,7 +2,7 @@ export const showPersonsReducer = (state=true,action ) =>{
 
 switch(action.type){
     case "SHOW_PERSONS":
-        return action.payload
+        return !state;
             default:
                 return state
 }

@@ -1,18 +1,21 @@
 import React from 'react';
 import Person from './Person';
+import {useSelector, useDispatch} from "react-redux"; 
+import { deletePerson, updatePerson } from "../../actions/persons"
 
 
-const Persons = ({persons, handleSavePerson, handleDeletePerson, handleNameChange}) => {
-
+const Persons = () => {
+    
+    const persons = useSelector(state => state.persons)
+    const dispatch= useDispatch()
     return (
       <>
         {persons.map(person => (
             <Person 
             key={person.id}
             fullname={person.fullname}
-            personSave={()=> handleSavePerson(person.id)}
-            personDelete={()=> handleDeletePerson(person.id)}
-            personChange={event=> handleNameChange(event, person.id)}
+            deleted={()=> dispatch(deletePerson(person.id))}
+            changed={e => dispatch(updatePerson(e, person.id))}
             />
         ))}
      

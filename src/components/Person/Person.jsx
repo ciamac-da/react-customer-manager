@@ -15,7 +15,7 @@ const theme = createMuiTheme({
   },
 });
 
-const Person =({fullname,personSave, personDelete, personChange})=>{
+const Person =({fullname, deleted, changed})=>{
   
   const classes = useStyles()
   
@@ -42,7 +42,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
              id="input-with-icon-grid" 
              label="Type here to modify" 
              placeholder={fullname} 
-             onChange={personChange}
+             onChange={changed}
              />
              </ThemeProvider>
           </Grid>
@@ -63,7 +63,6 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
       <div className={classes.buttons}>
         <Button 
         variant="contained" 
-        onClick={personSave}
         className={classes.buttonSave}
         >
         <AiTwotoneSave />
@@ -71,7 +70,7 @@ const Person =({fullname,personSave, personDelete, personChange})=>{
         Save...
         </Button>
         <Button 
-        onClick={personDelete}
+        onClick={deleted}
         variant="contained" 
         className={classes.buttonDel}
         >
