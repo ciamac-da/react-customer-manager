@@ -1,4 +1,4 @@
-Customer Manager App
+Customer Manager App using react-redux:)
 https://ciamac-da.github.io/react-customer-manager/
 
 ![](readmeImage/0.jpg)
