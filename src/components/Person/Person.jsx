@@ -1,7 +1,6 @@
 import React from 'react';
 import useStyles from "./PersonStyle";
 import { Typography, Grid, Card, TextField,Paper, CardActionArea , CardContent, Button } from '@material-ui/core';
-import Page from "react-page-loading";
 import { ThemeProvider, createMuiTheme, } from '@material-ui/core/styles';
 import {RiDeleteBin2Fill} from "react-icons/ri";
 import {AiTwotoneSave} from "react-icons/ai";
@@ -21,7 +20,7 @@ const Person =({fullname, deleted, changed})=>{
   
   return(
 
-    <Page loader={"bar"} color={"white"} size={9} duration={1}>
+    <div>
     <Paper>
 
      <Card className={classes.myCard}>
@@ -82,7 +81,7 @@ const Person =({fullname, deleted, changed})=>{
        </CardActionArea>
     </Card>
     </Paper>
-    </Page>
+    </div>
 );
 }
  
